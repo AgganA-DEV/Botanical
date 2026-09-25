@@ -3,149 +3,402 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service — AroidNode</title>
+  <title>Terms of Service — AroidNode Legal Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #FBF9F5;
+      --bg: #F7F5F0;
       --card-bg: #FFFFFF;
-      --text-main: #1C241D;
-      --text-muted: #5C6E60;
-      --accent: #1B4332;
-      --accent-light: #2D6A4F;
-      --border: #E5EADF;
+      --card-alt: #FBF9F5;
+      --text-title: #14281D;
+      --text-main: #243329;
+      --text-muted: #5C6B61;
+      --forest-deep: #183D2B;
+      --forest-mid: #25563E;
+      --forest-soft: #E8F0EA;
+      --gold-accent: #9A7B4F;
+      --gold-light: #F7F3EB;
+      --gold-border: #DCD2C0;
+      --border: #E2DDD3;
+      --shadow: 0 4px 24px rgba(20, 40, 29, 0.05);
+      --font-serif: "Newsreader", Georgia, serif;
+      --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
+
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #121814;
-        --card-bg: #1A221C;
-        --text-main: #F0F4F1;
-        --text-muted: #95A599;
-        --accent: #52B788;
-        --accent-light: #74C69D;
-        --border: #2B3A2E;
+        --bg: #121614;
+        --card-bg: #181E1A;
+        --card-alt: #1F2722;
+        --text-title: #EDE9E0;
+        --text-main: #D2CDC3;
+        --text-muted: #8E9990;
+        --forest-deep: #5A8C6E;
+        --forest-mid: #74A787;
+        --forest-soft: #1E2822;
+        --gold-accent: #C4A572;
+        --gold-light: #23201A;
+        --gold-border: #3D3528;
+        --border: #2A352D;
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
       }
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: var(--font-sans);
       background-color: var(--bg);
       color: var(--text-main);
-      line-height: 1.65;
-      padding: 32px 16px;
+      line-height: 1.7;
+      padding: 36px 16px;
+      -webkit-font-smoothing: antialiased;
     }
+
     .container {
-      max-width: 820px;
+      max-width: 860px;
       margin: 0 auto;
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px 32px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      border-radius: 12px;
+      padding: 48px 40px;
+      box-shadow: var(--shadow);
     }
-    .header {
-      border-bottom: 1px solid var(--border);
+
+    /* Botanical Crest Header */
+    .brand-crest {
+      display: flex;
+      align-items: center;
+      gap: 16px;
       padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
       margin-bottom: 28px;
     }
-    .badge {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(82, 183, 136, 0.15);
-      padding: 4px 12px;
-      border-radius: 99px;
-      margin-bottom: 12px;
+
+    .crest-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--forest-soft);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--forest-deep);
+      flex-shrink: 0;
     }
-    h1 {
-      font-size: 30px;
-      color: var(--text-main);
-      margin-bottom: 8px;
-      font-weight: 800;
-    }
-    .meta {
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-    h2 {
+
+    .crest-titles h3 {
+      font-family: var(--font-serif);
       font-size: 20px;
-      margin-top: 32px;
-      margin-bottom: 12px;
-      color: var(--accent-light);
       font-weight: 700;
+      color: var(--text-title);
+      letter-spacing: -0.2px;
     }
+
+    .crest-titles p {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-item {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text-muted);
+      background: var(--card-alt);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item:hover, .nav-item.active {
+      color: var(--card-bg);
+      background: var(--forest-deep);
+      border-color: var(--forest-deep);
+    }
+
+    /* Document Header */
+    .doc-header {
+      margin-bottom: 32px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--gold-accent);
+      background: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      line-height: 1.25;
+      color: var(--text-title);
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .doc-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .doc-meta span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Content Typography */
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--text-title);
+      font-weight: 700;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      letter-spacing: -0.2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-title);
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
     p {
       margin-bottom: 16px;
+      font-size: 15px;
       color: var(--text-main);
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 18px;
       font-size: 15px;
     }
-    ul {
-      margin-left: 24px;
-      margin-bottom: 16px;
-      color: var(--text-main);
-      font-size: 15px;
-    }
+
     li {
       margin-bottom: 8px;
+      padding-left: 4px;
     }
-    .footer {
-      margin-top: 40px;
-      padding-top: 20px;
+
+    strong {
+      color: var(--text-title);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--forest-deep);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      color: var(--forest-mid);
+    }
+
+    /* Curatorial Callouts */
+    .callout {
+      background: var(--card-alt);
+      border-left: 3px solid var(--forest-deep);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      margin: 22px 0;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .callout.gold {
+      border-left-color: var(--gold-accent);
+      background: var(--gold-light);
+      border-top-color: var(--gold-border);
+      border-right-color: var(--gold-border);
+      border-bottom-color: var(--gold-border);
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text-title);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Footer */
+    .doc-footer {
+      margin-top: 48px;
+      padding-top: 24px;
       border-top: 1px solid var(--border);
       font-size: 13px;
       color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       text-align: center;
     }
-    a {
-      color: var(--accent);
-      text-decoration: underline;
+
+    @media print {
+      body { background: #FFFFFF; color: #000000; padding: 0; }
+      .container { border: none; box-shadow: none; padding: 0; max-width: 100%; }
+      .nav-bar { display: none; }
+      h2 { border-top: 1px solid #CCC; }
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 28px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 19px; }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <div class="header">
-      <span class="badge">Legal Terms of Service</span>
-      <h1>Terms of Service for AroidNode</h1>
-      <div class="meta">Effective Date: September 24, 2026 | Application: AroidNode (com.aroidnode)</div>
-    </div>
 
-    <p>Welcome to <strong>AroidNode</strong>. By installing, accessing, or using our mobile application, you agree to be legally bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the application.</p>
+    <!-- Crest Header -->
+    <header class="brand-crest">
+      <div class="crest-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 4 13C4 7 11 3 11 3s7 4 7 10a7 7 0 0 1-7 7Z"/>
+          <path d="M11 3v17"/>
+          <path d="M11 11l4-2"/>
+          <path d="M11 15l-3-2"/>
+        </svg>
+      </div>
+      <div class="crest-titles">
+        <h3>AroidNode Legal & Curatorial Archive</h3>
+        <p>Official Public Compliance Documentation · Koinvision</p>
+      </div>
+    </header>
 
-    <h2>1. Service Description</h2>
-    <p>AroidNode provides an archival and curatorial digital management platform for rare aroid enthusiasts, botanists, and collectors. Features include specimen cataloging, lineage/pedigree logging, chimera stability estimation, and personal accession records.</p>
+    <!-- Quick Navigation Bar -->
+    <nav class="nav-bar">
+      <a class="nav-item" href="privacy-policy.html">Privacy Policy</a>
+      <a class="nav-item active" href="terms-of-service.html">Terms of Service</a>
+      <a class="nav-item" href="privacy-policy.html#data-safety">Data Safety</a>
+      <a class="nav-item" href="privacy-policy.html#account-deletion">Account Deletion</a>
+      <a class="nav-item" href="index.html">Legal Portal Hub</a>
+      <a class="nav-item" href="#contact">Contact Support</a>
+    </nav>
 
-    <h2>2. Botanical Valuation & Market Estimates Disclaimer</h2>
-    <p>All specimen valuations, leaf market charts, and investment analytics displayed within AroidNode are calculated based on user input, reference botanical ranges, and mathematical modeling. They are provided solely for educational and curatorial reference. AroidNode does not provide certified botanical appraisal, financial investment, or commercial warranties.</p>
+    <!-- TERMS OF SERVICE MAIN -->
+    <main>
+      <div class="doc-header">
+        <span class="status-badge">Official Curatorial Terms</span>
+        <h1>Terms of Service for AroidNode</h1>
+        <div class="doc-meta">
+          <span><strong>Effective Date:</strong> September 25, 2026</span>
+          <span>·</span>
+          <span><strong>Application:</strong> AroidNode (com.aroidnode)</span>
+          <span>·</span>
+          <span><strong>Entity:</strong> Koinvision</span>
+        </div>
+      </div>
 
-    <h2>3. Subscriptions & In-App Purchases</h2>
-    <p>Certain advanced features (such as Botanical Patron tiers) may require paid subscriptions or one-time purchases:</p>
-    <ul>
-      <li>All purchases are securely handled through the <strong>Google Play Store Billing</strong> service.</li>
-      <li>Subscription fees, billing cycles, and automatic renewal options are governed by Google Play Store terms.</li>
-      <li>You can manage or cancel your active subscriptions at any time via your Google Play Account settings.</li>
-    </ul>
+      <p>Welcome to <strong>AroidNode</strong>. By downloading, accessing, or utilizing our mobile software application ("Application"), you agree to enter into a legally binding contract with Koinvision ("Company", "we", "us", or "our") governed by these Terms of Service ("Terms"). If you do not agree with all terms herein, you must immediately discontinue use and uninstall the Application.</p>
 
-    <h2>4. Intellectual Property & User Content</h2>
-    <ul>
-      <li><strong>Your Content:</strong> You retain full ownership and copyright of all photos, growth journals, and records you produce in the app.</li>
-      <li><strong>Our Content:</strong> The AroidNode application, brand mark, visual design system, algorithms, and source code are the intellectual property of the AroidNode development team.</li>
-    </ul>
+      <h2>1. Description of Curatorial Services</h2>
+      <p>AroidNode provides digital archival and tracking tools specifically crafted for rare botanical collectors, tissue culture propagators, and aroid enthusiasts. Features encompass:</p>
+      <ul>
+        <li>Botanical accession logging, variegation sector tracking, and growth journals.</li>
+        <li>Node propagation lineage and cutting genealogy trees.</li>
+        <li>Mathematical valuation models and rare market reference indexes.</li>
+        <li>On-device collection export (JSON / CSV).</li>
+      </ul>
 
-    <h2>5. Disclaimer of Warranties & Limitation of Liability</h2>
-    <p>AroidNode is provided on an "AS IS" and "AS AVAILABLE" basis. While we strive for maximum data integrity, you are responsible for maintaining backups using our built-in JSON export feature. To the maximum extent permitted by applicable law, AroidNode shall not be liable for any indirect, incidental, or consequential damages resulting from app usage or plant specimen outcomes.</p>
+      <h2>2. Botanical Valuation & Market Analytics Disclaimer</h2>
+      <div class="callout gold">
+        <div class="callout-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Crucial Disclaimer on Botanical Valuations & Biology
+        </div>
+        <strong>Estimates Only:</strong> All specimen valuations, leaf index rates, and investment trend graphs provided by AroidNode represent automated algorithmic estimates based on user records and reference ranges. They <strong>do not constitute certified botanical appraisal, financial guidance, tax advisory, or insured market warranties</strong>.<br><br>
+        <strong>Biological Uncertainty:</strong> Variegation stability, chimera sport reversion, node rooting vitality, and tissue culture mutational fitness are biological phenomena subject to microclimate and genetic variability. Koinvision assumes zero legal liability for horticultural decay, specimen mortality, or commercial transactions executed between third parties.
+      </div>
 
-    <h2>6. Governing Law & Contact</h2>
-    <p>These Terms are governed by applicable laws. For questions or support, contact us at:</p>
-    <ul>
-      <li>Email: <a href="mailto:support@aroidnode.com">support@aroidnode.com</a></li>
-    </ul>
+      <h2>3. In-App Purchases & Subscriptions (Google Play Billing)</h2>
+      <p>AroidNode provides free access to foundational curatorial features, with optional premium upgrades ("Botanical Patron" tiers) that unlock advanced capabilities:</p>
+      <ul>
+        <li><strong>Google Play Processing:</strong> All in-app purchases, recurring subscription plans, and promotional offers are handled exclusively through <strong>Google Play In-App Billing</strong>. Your billing relationship is subject to Google Play Terms of Service.</li>
+        <li><strong>Automatic Renewal:</strong> Unless canceled at least 24 hours prior to the conclusion of the active subscription period, patron subscriptions automatically renew at the then-current price.</li>
+        <li><strong>Cancellation Procedure:</strong> You may cancel or amend your subscription at any time via the <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">Google Play Subscription Center</a>. <em>Please note: Uninstalling the AroidNode app from your phone does not automatically cancel an active Google Play subscription.</em></li>
+        <li><strong>Refunds:</strong> Refund requests are evaluated and disbursed according to the standard refund policies of Google Play.</li>
+      </ul>
 
-    <div class="footer">
-      &copy; 2026 AroidNode. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a>
-    </div>
+      <h2>4. User Content & Intellectual Property Sovereignty</h2>
+      <ul>
+        <li><strong>Your Records & Media:</strong> You retain complete, unrestricted copyright and ownership of all accession records, specimen photography, personal care notes, and genealogy files you input into AroidNode.</li>
+        <li><strong>Proprietary Software:</strong> The AroidNode codebase, brand marks, botanical algorithms, visual identity, and user experience designs are the exclusive intellectual property of Koinvision. You may not reverse-engineer, decompile, redistribute, or create unauthorized derivative works from the Application.</li>
+      </ul>
+
+      <h2>5. Archival Preservation & User Responsibility</h2>
+      <p>Because AroidNode prioritizes on-device data sovereignty and does not mirror your full photographic library to central commercial clouds, you are encouraged to execute periodic collection backups using the in-app <strong>Export Collection Archive</strong> feature (Profile &rarr; Archive Management). We recommend storing your exported JSON files in your preferred cloud storage or physical drive.</p>
+
+      <h2>6. Limitation of Liability</h2>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL KOINVISION, ITS DIRECTORS, OR DEVELOPERS BE LIABLE FOR ANY INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES (INCLUDING LOSS OF PROFITS, DATA CORRUPTION, OR BOTANICAL ASSET LOSS) ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF AROIDNODE. THE SOFTWARE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY NATURE.</p>
+
+      <h2>7. Termination of Service</h2>
+      <p>You may terminate your agreement with us at any time by ceasing all use of the Application and deleting your local data. We reserve the right to suspend or discontinue features or update compatibility requirements with prior public notice on our legal repository.</p>
+
+      <h2>8. Governing Law & Dispute Resolution</h2>
+      <p>These Terms are governed by and construed in accordance with applicable consumer laws. Any disputes arising hereunder shall be resolved through good-faith informal negotiation between the parties prior to seeking judicial proceedings.</p>
+
+      <h2 id="contact">9. Curatorial Support & Official Notice</h2>
+      <p>For questions regarding these Terms, commercial licensing, or patron support, please contact:</p>
+      <ul>
+        <li><strong>Official Support Email:</strong> <a href="mailto:support.aroidnote@koinvision.com">support.aroidnote@koinvision.com</a></li>
+        <li><strong>Legal Entity:</strong> Koinvision</li>
+        <li><strong>Application Package:</strong> <code>com.aroidnode</code></li>
+      </ul>
+    </main>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+      <div>&copy; 2026 Koinvision. All rights reserved. · AroidNode Curatorial Archive</div>
+      <div>
+        <a href="privacy-policy.html">Privacy Policy</a> ·
+        <a href="terms-of-service.html">Terms of Service</a> ·
+        <a href="privacy-policy.html#account-deletion">Account Deletion</a> ·
+        <a href="index.html">Legal Portal Hub</a>
+      </div>
+    </footer>
+
   </div>
+
 </body>
 </html>
